@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Write</title>
+
+</head>
+
+
+
+
+<body>
+
+  <p>Write your transaction😀</p>
+
+  <form action='/writeTransaction' method='POST'>
+
+    <input type='text' name='title' placeholder="Title: ">
+    <br>
+    <input type='datetime-local' name='date' placeholder="Title: ">
+    <br>
+    <input type='number' name='amount' placeholder="Amount: ">
+    <br>
+    <input type="radio" name="type" value="income"> income
+    <input type="radio" name="type" value="expense" checked> expense
+    <br>
+    <button type='submit'>Send</button>
+
+  </form>
+
+
+
+
+</body>
+
+
+
+
+</html>
