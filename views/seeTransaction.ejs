@@ -4,32 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css" />
   <title>See</title>
 </head>
 
 <body>
-  <h1> <%= transaction.title %> </h1>
-  <h3> <%= transaction.date %> </h3>
-  <p> <%= transaction.amount %> </p>
-  <p> <%= transaction.type %> </p>
+  <div class="seeIt">
+    <% console.log(transaction) %>
+    <h1> <%= transaction.title %> </h1>
+    <h3> <%= transaction.date %> </h3>
+    <p> <%= transaction.amount %> </p>
+    <p> <%= transaction.type %> </p>
 
-  <br>
+    <br>
 
-  <% if(editMode) { %>
-  <form action='/updateTransaction' method='POST'>
-    <input type="hidden" name="transactionId" value='<%=transaction._id %>'>
-    <input type='text' name='title' placeholder="Title: " value='<%=transaction.title %>'>
-    <br>
-    <input type='datetime-local' name='date' placeholder="Title: " value='<%=transaction.date %>'>
-    <br>
-    <input type='number' name='amount' placeholder="Amount: " value='<%=transaction.amount %>'>
-    <br>
-    <input type="radio" name="type" value="income"> income
-    <input type="radio" name="type" value="expense" checked> expense
-    <br>
-    <button type='submit'>Send</button>
-  </form>
-  <%  }  %>
+    <% if(editMode) { %>
+    <form action='/updateTransaction' method='POST'>
+      <input type="hidden" name="transactionId" value='<%=transaction._id %>'>
+      <input type='text' name='title' placeholder="Title: " value='<%=transaction.title %>'>
+      <br>
+      <input type='datetime-local' name='date' placeholder="Title: " value='<%=transaction.date %>'>
+      <br>
+      <input type='number' name='amount' placeholder="Amount: " value='<%=transaction.amount %>' min="0.00" step="0.01">
+      <br>
+      <input type="radio" name="type" value="income"> income
+      <input type="radio" name="type" value="expense" checked> expense
+      <br>
+      <button type='submit'>Send</button>
+    </form>
+    <%  }  %>
+  </div>
 
 </body>
 

@@ -124,9 +124,88 @@ q {
 
 .test h1 {
   position: relative;
-  left: 2px;
-  top: -24px;
+  top: -185px;
+}
+
+
+.read {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5%;
+  font-size: 3rem;
+}
+
+
+.read h1 {
+  font-size: 5rem;
+
+}
+
+.tContent {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: .2em;
+  margin-bottom: 1em;
+}
+
+.tContent li {
+  list-style-type: none;
+}
+
+
+
+.write {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 5rem;
+}
+
+.write input {
+  font-size: 0.8em;
+  color: white;
+  background-color: black;
+}
+
+.write input[type=radio] {
+  margin-top: 1em;
+  width: 1em;
+  height: 1em;
+}
+
+.write button {
+  font-size: 1em;
+  position: relative;
+  left: 272px;
+  top: 38px;
   transition: none 0s ease 0s;
   cursor: move;
+  background-color: #3b93ff;
+  border-radius: 0.3em;
+  color: white;
+  border-width: .1em;
+}
+
+.seeIt {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
 }

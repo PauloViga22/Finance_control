@@ -5,33 +5,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Read Notes</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <title>Read transaction </title>
 </head>
 
 <body>
-  <h1>Last transactions</h1>
-  <ul>
-    <% transactions.map(transaction => { %>
-    <li> <a href="/transactions/<%= transaction._id %>"> <%= transaction.title %> </a></li>
+  <div class="read">
+    <h1>Last transactions</h1>
+    <div class="tContent">
+      <!-- <ul> -->
+      <% transactions.map(transaction => { %>
+      <li> <a href="/transactions/<%= transaction._id %>"> <%= transaction.title %> </a></li>
 
-    <a href='/transactions/<%= transaction._id %>?edit=true'><button type='submit'>EDIT</button></a>
+      <a href='/transactions/<%= transaction._id %>?edit=true'><button type='submit'>EDIT</button></a>
 
-    <form action='/seeTransaction' method='POST'>
-      <input type='hidden' name='transactionId' value='<%=transaction._id %>'>
-      <button type='submit'>DELETE</button>
-    </form>
-    <% }) %>
-  </ul>
+      <form action='/seeTransaction' method='POST'>
+        <input type='hidden' name='transactionId' value='<%=transaction._id %>'>
+        <button type='submit'>DELETE</button>
+      </form>
+      <% }) %>
+      <!-- </ul> -->
 
-  <% console.log(transactions);
+      <% console.log(transactions);
     //  let total = transactions.reduce((a, b) => ({amount: a.amount + b.amount}));
      let total = transactions.reduce(function (acc, obj) { return acc + parseFloat(obj.amount); }, 0);
      console.log("total:",total);
 
-  %>
+     %>
+    </div>
+    <h2>total: <%=total%></h2>
 
-  <h2>total: <%=total%></h2>
-
+  </div>
 </body>
 
 </html>
