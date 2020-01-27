@@ -177,6 +177,7 @@ q {
   font-size: 0.8em;
   color: white;
   background-color: black;
+  border-radius: 0.3em;
 }
 
 .write input[type=radio] {
@@ -199,13 +200,32 @@ q {
 }
 
 .seeIt {
-  background-color: black;
-  color: white;
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  background-color: black;
+  color: white;
+  font-size: 1.5em;
+}
 
+.seeIt input[type=radio] {
+  margin-top: 1em;
+  width: 1em;
+  height: 1em;
+}
+
+.seeIt button {
+  font-size: 1em;
+  position: relative;
+  left: 272px;
+  top: 38px;
+  transition: none 0s ease 0s;
+  cursor: move;
+  background-color: #3b93ff;
+  border-radius: 0.3em;
+  color: white;
+  border-width: .1em;
 }
