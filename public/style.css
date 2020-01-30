@@ -144,6 +144,12 @@ q {
 
 .read h1 {
   font-size: 5rem;
+}
+
+
+.read button {
+  font-size: 2rem;
+  border-radius: 0.5em;
 
 }
 
